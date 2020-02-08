@@ -1,7 +1,7 @@
 { pkgs ? import <nixpkgs> { } }:
 
 pkgs.stdenv.mkDerivation rec {
-  name = "gruvboxcss";
+  name = "gruvbox-css";
   version = "latest";
   src = ./.;
   phases = "installPhase";
