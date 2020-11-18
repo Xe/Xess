@@ -7,7 +7,7 @@ pkgs.stdenv.mkDerivation rec {
   phases = "installPhase";
   installPhase = ''
     mkdir -p $out
-    cp -rf $src/gruvbox.css $out/gruvbox.css
-    cp -rf $src/snow.css $out/snow.css
+    ${pkgs.nodePackages.clean-css-cli}/bin/cleancss -o $out/gruvbox.css $src/gruvbox.css
+    ${pkgs.nodePackages.clean-css-cli}/bin/cleancss -o $out/snow.css $src/snow.css
   '';
 }
