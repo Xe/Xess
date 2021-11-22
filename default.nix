@@ -4,11 +4,12 @@ pkgs.stdenv.mkDerivation rec {
   name = "Xess";
   version = "latest";
   src = ./.;
+  inputs = with pkgs; [ nodePackages.clean-css-cli ];
   phases = "installPhase";
   installPhase = ''
-    mkdir -p $out
-    ${pkgs.nodePackages.clean-css-cli}/bin/cleancss -o $out/xess.css $src/xess.css
-    ${pkgs.nodePackages.clean-css-cli}/bin/cleancss -o $out/snow.css $src/snow.css
-    ln -s $out/xess.css $out/gruvbox.css
+    mkdir -p $out/static
+    cleancss -o $out/static/xess.css $src/xess.css
+    cleancss -o $out/static/xess_snow.css $src/snow.css
+    ln -s $out/static/xess.css $out/gruvbox.css
   '';
 }
