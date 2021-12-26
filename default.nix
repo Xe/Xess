@@ -4,7 +4,7 @@ pkgs.stdenv.mkDerivation rec {
   name = "Xess";
   version = "latest";
   src = ./.;
-  inputs = with pkgs; [ nodePackages.clean-css-cli ];
+  buildInputs = with pkgs; [ nodePackages.clean-css-cli ];
   phases = "installPhase";
   installPhase = ''
     mkdir -p $out/static/css
