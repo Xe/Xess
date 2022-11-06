@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Page Title</title>
+        <title>Xess sample</title>
         <link type="text/css" rel="stylesheet" href="gruvbox.css">
-        <link type="text/css" rel="stylesheet" href="snow.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body class="snow" id="top">
         <main>
-            <h1>Page title</h1>
+            <h1>Xess sample</h1>
 
-            <p>Hello! this is an example page using <a href="https://github.com/Xe/gruvbox-css">gruvbox-css</a></p>
+            <p>Hello! this is an example page using <a href="https://github.com/Xe/Xess">Xess</a></p>
 
             <blockquote>When in doubt, create another framework</blockquote>
 
             <ul><li>Unknown</li></ul>
 
+            <code><pre>
+import Control.Concurrent
+import Control.Monad
+import System.Environment
+
+sort values = do
+    chan <- newChan
+    forM_ values (\time -> forkIO $ threadDelay (100000 * time) >> writeChan chan time)
+    forM_ values (\_ -> readChan chan >>= print)
+    
+main = getArgs >>= sort . map read</pre></code>
+
             <p>Select this text to see what happens!</p>
+
+            <p>I'm baby coloring book normcore green juice, lo-fi forage affogato chicharrones echo park jean shorts fingerstache kitsch stumptown. Schlitz chambray praxis craft beer, selfies messenger bag gluten-free austin fit cred tbh meh lomo vice man braid. VHS bitters fanny pack pok pok, mustache cred godard enamel pin hashtag street art. Before they sold out pinterest poke jianbing chicharrones.</p>
+
+            <p>Bespoke la croix gastropub flexitarian jean shorts. Shoreditch wolf chicharrones cloud bread normcore. Distillery thundercats street art, schlitz fashion axe blue bottle tacos lomo. Artisan scenester neutra tumblr pabst art party affogato church-key, yuccie gochujang VHS truffaut.</p>
+
+            <p>Glossier 3 wolf moon irony bodega boys 90's cardigan chambray gastropub, YOLO whatever. Ethical ascot street art flexitarian listicle. Cray photo booth kitsch portland before they sold out blue bottle taxidermy franzen cloud bread hashtag. Taiyaki mustache yuccie poutine cray raclette tonx distillery banh mi narwhal chartreuse blue bottle food truck master cleanse. Trust fund austin cornhole raw denim pok pok church-key gatekeep, meditation palo santo cliche cloud bread cronut cardigan. Cold-pressed quinoa live-edge humblebrag, twee man bun kitsch authentic fanny pack selfies single-origin coffee slow-carb bitters selvage. Typewriter cornhole truffaut, poutine wayfarers vaporware portland ugh.</p>
+
+            <p>Master cleanse meggings shoreditch chartreuse. Brooklyn semiotics tumeric, mumblecore normcore raclette gentrify chillwave asymmetrical PBR&B mustache hoodie jean shorts sriracha. Umami chicharrones raclette venmo echo park quinoa, lyft migas sartorial edison bulb. Cray hella hot chicken lumbersexual church-key fixie direct trade street art unicorn echo park scenester vibecession ramps lyft put a bird on it. Yes plz JOMO jianbing fixie gentrify fingerstache DSA church-key four loko sustainable kale chips flannel.</p>
+
+            <p>Synth authentic readymade taiyaki artisan, lo-fi gochujang hashtag occupy. Vaporware occupy organic fanny pack hammock pabst succulents tonx plaid copper mug direct trade. Raw denim cray heirloom ethical single-origin coffee lo-fi. Fam sustainable YOLO fingerstache, seitan street art quinoa health goth actually knausgaard DIY. Bicycle rights fixie pickled organic, +1 gluten-free cray keytar. Kickstarter neutra helvetica unicorn.</p>
 
             <footer>
                 <p>CSS available under the MIT license.</p>

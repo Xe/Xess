@@ -8,7 +8,7 @@ pkgs.stdenv.mkDerivation rec {
   phases = "installPhase";
   installPhase = ''
     mkdir -p $out/static/css
-    cleancss -o $out/static/css/xess.css $src/xess.css
+    cleancss -o $out/static/css/xess.css $src/classic/xess.css
     cleancss -o $out/static/css/xess_snow.css $src/snow.css
     ln -s $out/static/css/xess.css $out/gruvbox.css
   '';
