@@ -16,7 +16,7 @@
 }
 
 main {
-  font-family: monospace, monospace;
+  font-family: var(--font-family);
   max-width: var(--width);
   padding: var(--padding);
   margin: auto;
