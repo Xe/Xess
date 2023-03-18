@@ -38,6 +38,7 @@ body {
 }
 
 pre {
+  font-family: var(--pre-font-family);
   background-color: var(--pre-background);
   padding: 1em;
   border: 0;
@@ -48,7 +49,8 @@ a, a:active, a:visited {
   background-color: var(--a-background);
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--header-font-family);
   margin-bottom: .1rem;
 }
 

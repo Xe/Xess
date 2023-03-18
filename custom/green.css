@@ -2,8 +2,10 @@
     --background-color: 134;
     --text-color: 185;
     --accent-color: 46;
-    --font-family: monospace, monospace;
-
     --width: 80ch;
     --padding: 0;
+    
+    --font-family "Iosekva Aile Iaso", sans-serif;
+    --header-font-family "Iosekva Etoile Iaso", serif;
+    --pre-font-family "Iosekva Curly Iaso", monospace;
 }
