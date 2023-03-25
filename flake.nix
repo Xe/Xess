@@ -30,6 +30,18 @@
           cherry = customized ./custom/cherry.css;
           green = customized ./custom/green.css;
           kafon = customized ./custom/kafon.css;
+
+          iaso = pkgs.stdenv.mkDerivation rec {
+            name = "Xess";
+            version = "latest";
+            src = ./.;
+            buildInputs = with pkgs; [ nodePackages.clean-css-cli ];
+            phases = "installPhase";
+            installPhase = ''
+              mkdir -p $out/static/css
+              cleancss -o $out/static/css/xess.css $src/classic/iaso.css
+            '';
+          };
         };
         devShell = import ./shell.nix { inherit pkgs; };
       });
