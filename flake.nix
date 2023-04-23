@@ -31,6 +31,15 @@
           green = customized ./custom/green.css;
           kafon = customized ./custom/kafon.css;
 
+          combined = pkgs.runCommand "combined" {} ''
+            mkdir -p $out
+            ln -s ${iaso}/static/css/xess.css $out/xess.css
+            ln -s ${aoi}/static/css/xess.css $out/aoi.css 
+            ln -s ${cherry}/static/css/xess.css $out/cherry.css 
+            ln -s ${green}/static/css/xess.css $out/green.css 
+            ln -s ${kafon}/static/css/xess.css $out/kafon.css 
+          '';
+
           iaso = pkgs.stdenv.mkDerivation rec {
             name = "Xess";
             version = "latest";
