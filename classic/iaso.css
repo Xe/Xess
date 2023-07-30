@@ -18,8 +18,8 @@ main {
 }
 
 body {
-  background: #282828;
-  color:      #ebdbb2;
+  background: #1d2021;
+  color:      #f9f5d7;
 }
 
 pre {
@@ -31,7 +31,7 @@ pre {
 
 a, a:active, a:visited {
   color: #b16286;
-  background-color: #1d2021;
+  background-color: #282828;
 }
 
 h1, h2, h3, h4, h5 {
@@ -51,8 +51,8 @@ footer {
 
 @media (prefers-color-scheme: light) {
     body {
-        background: #fbf1c7;
-        color:      #3c3836;
+        background: #f9f5d7;
+        color:      #1d2021;
     }
 
     pre {
@@ -63,7 +63,7 @@ footer {
 
     a, a:active, a:visited {
         color: #b16286;
-        background-color: #f9f5d7;
+        background-color: #bdae93;
     }
 
     h1, h2, h3, h4, h5 {
